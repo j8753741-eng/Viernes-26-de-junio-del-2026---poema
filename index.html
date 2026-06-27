@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eres el Universo Entero que mi Corazón Eligió para Siempre</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:
+radial-gradient(circle at top,#4f2f72 0%,#23163d 30%,#0d1028 65%,#05060f 100%);
+
+overflow-x:hidden;
+font-family:'Cormorant Garamond',serif;
+color:#fff;
+
+}
+
+/* Fondo de estrellas */
+
+body::before{
+
+content:"";
+position:fixed;
+inset:0;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(rgba(255,255,255,.8) 1px,transparent 1px),
+radial-gradient(rgba(255,255,255,.6) 1px,transparent 1px);
+
+background-size:
+120px 120px,
+180px 180px,
+240px 240px;
+
+animation:starsMove 80s linear infinite;
+
+opacity:.55;
+
+z-index:-4;
+
+}
+
+/* Neblina romántica */
+
+body::after{
+
+content:"";
+position:fixed;
+inset:0;
+
+background:
+
+radial-gradient(circle at 20% 20%,rgba(255,170,220,.18),transparent 40%),
+radial-gradient(circle at 80% 30%,rgba(180,220,255,.12),transparent 45%),
+radial-gradient(circle at 50% 80%,rgba(255,200,240,.14),transparent 45%);
+
+filter:blur(25px);
+
+animation:fog 15s ease-in-out infinite alternate;
+
+z-index:-3;
+
+}
+
+@keyframes starsMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-250px);
+}
+
+}
+
+@keyframes fog{
+
+from{
+transform:scale(1);
+}
+
+to{
+transform:scale(1.15);
+}
+
+}
+
+/* Luna */
+
+.moon{
+
+position:fixed;
+
+top:60px;
+right:70px;
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,#fffef8,#fff6d5,#ffe7ab);
+
+box-shadow:
+
+0 0 40px rgba(255,255,255,.9),
+0 0 90px rgba(255,255,255,.45),
+0 0 160px rgba(255,245,210,.35);
+
+animation:moonFloat 7s ease-in-out infinite;
+
+z-index:-2;
+
+}
+
+@keyframes moonFloat{
+
+50%{
+
+transform:
+translateY(-10px);
+
+}
+
+}
+
+/* Corazones */
+
+.heart{
+
+position:fixed;
+
+bottom:-80px;
+
+font-size:20px;
+
+opacity:.18;
+
+animation:heartFloat linear infinite;
+
+pointer-events:none;
+
+}
+
+.heart:nth-child(1){
+
+left:10%;
+animation-duration:15s;
+
+}
+
+.heart:nth-child(2){
+
+left:25%;
+animation-duration:18s;
+
+font-size:28px;
+
+}
+
+.heart:nth-child(3){
+
+left:43%;
+animation-duration:20s;
+
+}
+
+.heart:nth-child(4){
+
+left:62%;
+animation-duration:17s;
+
+}
+
+.heart:nth-child(5){
+
+left:84%;
+animation-duration:22s;
+
+font-size:26px;
+
+}
+
+@keyframes heartFloat{
+
+from{
+
+transform:
+translateY(0)
+scale(.7);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.22;
+
+}
+
+to{
+
+transform:
+translateY(-120vh)
+scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+/* Contenedor */
+
+.container{
+
+width:92%;
+max-width:920px;
+
+margin:80px auto;
+
+}
+
+/* Tarjeta */
+
+.poem{
+
+background:rgba(255,255,255,.09);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.18);
+
+border-radius:35px;
+
+padding:70px 60px;
+
+box-shadow:
+
+0 0 40px rgba(255,182,220,.18),
+0 0 90px rgba(0,0,0,.35);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* Brillo */
+
+.poem::before{
+
+content:"";
+
+position:absolute;
+
+top:-60%;
+left:-40%;
+
+width:180%;
+height:180%;
+
+background:
+
+linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.08),
+transparent);
+
+transform:rotate(20deg);
+
+animation:shine 9s linear infinite;
+
+}
+
+@keyframes shine{
+
+100%{
+
+transform:
+translateX(40%)
+rotate(20deg);
+
+}
+
+}
+
+/* Rosas */
+
+.corner{
+
+position:absolute;
+
+font-size:42px;
+
+opacity:.85;
+
+filter:drop-shadow(0 0 10px rgba(255,150,190,.5));
+
+}
+
+.tl{
+
+top:18px;
+left:22px;
+
+}
+
+.tr{
+
+top:18px;
+right:22px;
+
+}
+
+.bl{
+
+bottom:18px;
+left:22px;
+
+}
+
+.br{
+
+bottom:18px;
+right:22px;
+
+}
+
+/* Título */
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:68px;
+
+text-align:center;
+
+line-height:1.15;
+
+color:#ffe6f3;
+
+text-shadow:
+
+0 0 15px rgba(255,255,255,.5),
+0 0 35px rgba(255,170,210,.6);
+
+margin-bottom:18px;
+
+}
+
+/* Fecha */
+
+.date{
+
+text-align:center;
+
+font-size:23px;
+
+letter-spacing:2px;
+
+color:#ffe9c8;
+
+margin-bottom:45px;
+
+font-style:italic;
+
+}
+
+.separator{
+
+width:180px;
+height:2px;
+
+margin:auto;
+
+background:
+
+linear-gradient(
+to right,
+transparent,
+#ffd8ec,
+white,
+#ffd8ec,
+transparent);
+
+margin-bottom:55px;
+
+}
+
+  /* Cuerpo del poema */
+
+.poem-content{
+
+position:relative;
+z-index:2;
+
+}
+
+.poem-content p{
+
+font-size:30px;
+
+line-height:2.05;
+
+text-align:center;
+
+margin:22px 0;
+
+font-weight:400;
+
+color:#fffdfd;
+
+text-shadow:
+0 0 8px rgba(255,255,255,.10);
+
+animation:fadeIn 1.2s ease both;
+
+}
+
+.poem-content p:nth-child(even){
+
+color:#ffeaf5;
+
+}
+
+.verse{
+
+margin:34px 0;
+
+}
+
+.signature{
+
+margin-top:70px;
+
+text-align:center;
+
+}
+
+.signature h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:58px;
+
+color:#ffd9ea;
+
+margin-bottom:10px;
+
+text-shadow:
+0 0 18px rgba(255,180,220,.6);
+
+}
+
+.signature span{
+
+display:block;
+
+font-size:24px;
+
+letter-spacing:3px;
+
+color:#fff0c9;
+
+font-style:italic;
+
+margin-top:15px;
+
+}
+
+.footer-stars{
+
+margin-top:45px;
+
+font-size:28px;
+
+text-align:center;
+
+letter-spacing:12px;
+
+opacity:.8;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.poem{
+
+padding:40px 28px;
+
+border-radius:28px;
+
+}
+
+h1{
+
+font-size:50px;
+
+}
+
+.date{
+
+font-size:18px;
+
+}
+
+.poem-content p{
+
+font-size:24px;
+
+line-height:1.9;
+
+}
+
+.signature h2{
+
+font-size:46px;
+
+}
+
+.signature span{
+
+font-size:18px;
+
+}
+
+.moon{
+
+width:110px;
+height:110px;
+
+top:35px;
+right:25px;
+
+}
+
+.corner{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<div class="heart">❤</div>
+<div class="heart">💖</div>
+<div class="heart">❤</div>
+<div class="heart">💕</div>
+<div class="heart">❤</div>
+
+<div class="container">
+
+<div class="poem">
+
+<div class="corner tl">🌹</div>
+<div class="corner tr">🌹</div>
+<div class="corner bl">🌹</div>
+<div class="corner br">🌹</div>
+
+<h1>
+Eres el Universo Entero<br>
+que mi Corazón Eligió para Siempre
+</h1>
+
+<div class="date">
+Viernes, 26 de junio de 2026 — Noche
+</div>
+
+<div class="separator"></div>
+
+<div class="poem-content">
+
+<p>Esta noche,</p>
+
+<p>cuando el cielo parece haberse vestido de infinito,</p>
+
+<p>cuando la luna derrama su luz plateada</p>
+
+<p>sobre cada rincón del mundo,</p>
+
+<p>y las estrellas escriben silenciosamente</p>
+
+<p>historias de amor que jamás tendrán final,</p>
+
+<p>mi corazón vuelve a pronunciar tu nombre</p>
+
+<p>como la oración más hermosa</p>
+
+<p>que aprendió desde que llegaste a mi vida.</p>
+
+<p>Porque amarte</p>
+
+<p>es el milagro más grande</p>
+
+<p>que el destino decidió regalarme.</p>
+
+<p>Eres la calma que encuentra mi alma</p>
+
+<p>después de todas las tormentas.</p>
+
+<p>Eres el abrazo</p>
+
+<p>que convierte cualquier tristeza</p>
+
+<p>en un recuerdo lejano.</p>
+
+<p>Eres la razón</p>
+
+<p>por la que mis días tienen sentido</p>
+
+<p>y mis noches están llenas de esperanza.</p>
+
+<p>Mi princesa hermosa,</p>
+
+<p>si algún día pudiera contar</p>
+
+<p>cada latido que nace por ti,</p>
+
+<p>descubrirías que no existe un solo segundo</p>
+
+<p>en el que mi corazón haya dejado de pertenecerte.</p>
+
+  <p>Te amo</p>
+
+<p>con la fuerza con la que el océano abraza la orilla.</p>
+
+<p>Con la paciencia de la luna</p>
+
+<p>esperando cada noche para iluminar el cielo.</p>
+
+<p>Con la eternidad de las estrellas</p>
+
+<p>que nunca dejan de brillar,</p>
+
+<p>aunque el amanecer las esconda por un momento.</p>
+
+<p>Y mientras pasan los días,</p>
+
+<p>mi amor por ti no envejece...</p>
+
+<p>se vuelve más profundo,</p>
+
+<p>más inmenso,</p>
+
+<p>más fuerte,</p>
+
+<p>más verdadero.</p>
+
+<p>Hoy puedo decir,</p>
+
+<p>sin temor a equivocarme,</p>
+
+<p>que eres el sueño</p>
+
+<p>que jamás quiero despertar.</p>
+
+<p>La mujer</p>
+
+<p>que convirtió mi vida</p>
+
+<p>en el lugar más hermoso del universo.</p>
+
+<p>La dueña absoluta</p>
+
+<p>de cada ilusión,</p>
+
+<p>de cada sonrisa,</p>
+
+<p>de cada esperanza</p>
+
+<p>y de cada uno de mis futuros.</p>
+
+<p>No existe distancia,</p>
+
+<p>ni tiempo,</p>
+
+<p>ni obstáculo,</p>
+
+<p>ni dificultad</p>
+
+<p>capaz de disminuir</p>
+
+<p>todo lo que siento por ti.</p>
+
+<p>Porque este amor</p>
+
+<p>no nació para durar unos días.</p>
+
+<p>Nació para desafiar al tiempo,</p>
+
+<p>para vencer cualquier adversidad</p>
+
+<p>y para permanecer vivo</p>
+
+<p>hasta el último latido de mi corazón.</p>
+
+<p>Quiero seguir descubriendo contigo</p>
+
+<p>cada amanecer,</p>
+
+<p>cada atardecer,</p>
+
+<p>cada noche llena de estrellas,</p>
+
+<p>tomando tu mano</p>
+
+<p>como si fuera el tesoro más valioso</p>
+
+<p>que Dios puso en mi camino.</p>
+
+  <p>Quiero ser quien cuide tus lágrimas,</p>
+
+<p>quien celebre tus sonrisas,</p>
+
+<p>quien levante tu ánimo cuando lo necesites,</p>
+
+<p>y quien jamás permita</p>
+
+<p>que olvides lo extraordinaria,</p>
+
+<p>maravillosa</p>
+
+<p>y profundamente hermosa que eres.</p>
+
+<p>Porque tus ojos</p>
+
+<p>siguen siendo el lugar</p>
+
+<p>donde mi alma encuentra paz.</p>
+
+<p>Tu voz</p>
+
+<p>es la melodía</p>
+
+<p>que logra silenciar todas mis preocupaciones.</p>
+
+<p>Y tu corazón</p>
+
+<p>es el hogar</p>
+
+<p>donde el mío siempre quiere descansar.</p>
+
+<p>Esta noche de viernes,</p>
+
+<p>mientras el mundo duerme</p>
+
+<p>y el universo continúa girando en silencio,</p>
+
+<p>yo solo tengo una certeza:</p>
+
+<p>volvería a elegirte</p>
+
+<p>una y mil veces.</p>
+
+<p>En esta vida,</p>
+
+<p>en todas las vidas,</p>
+
+<p>y en cada universo donde exista la posibilidad de amar.</p>
+
+<p>Porque tú eres,</p>
+
+<p>has sido</p>
+
+<p>y siempre serás</p>
+
+<p>el amor más grande,</p>
+
+<p>más puro,</p>
+
+<p>más intenso</p>
+
+<p>y más eterno</p>
+
+<p>que mi corazón conocerá.</p>
+
+<p>Y mientras exista una estrella iluminando el cielo,</p>
+
+<p>una luna acompañando la noche</p>
+
+<p>y un latido viviendo dentro de mi pecho,</p>
+
+<p>seguiré amándote</p>
+
+<p>con toda mi alma,</p>
+
+<p>con todo mi ser,</p>
+
+<p>con toda mi vida</p>
+
+<p>y con un amor tan infinito,</p>
+
+<p>que ni la eternidad alcanzará para medirlo.</p>
+
+<p>Te amo, mi princesa hermosa.</p>
+
+<p>Hoy, mañana, cada noche... y para toda la eternidad. ❤️</p>
+
+</div>
+
+<div class="separator"></div>
+
+<div class="signature">
+
+<h2>Para Siempre Tú y Yo</h2>
+
+<span>
+Con todo mi amor, hoy y por toda la eternidad.
+</span>
+
+<div class="footer-stars">
+✦ ✨ 🌙 ✨ ✦ ❤️ ✦ ✨ 🌹 ✨ ✦
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
